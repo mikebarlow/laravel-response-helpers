@@ -1,5 +1,5 @@
 {
-    "name": "snscripts/laravel-response-helpers",
+    "name": "mbarlow/laravel-response-helpers",
     "description": "Helpers for Laravel based API responses",
     "type": "library",
     "license": "MIT",

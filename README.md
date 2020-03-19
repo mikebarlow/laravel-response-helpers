@@ -6,7 +6,7 @@ A collection of helpers for returning a response from your API more expressively
 
 Simply require the package via composer into your Laravel API.
 
-    composer require snscripts/laravel-response-helpers
+    composer require mbarlow/laravel-response-helpers
 
 No extra setup is required. The helper file is autoloaded via the "autoload" attributes of the `composer.json` file.
 
