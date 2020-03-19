@@ -28,5 +28,11 @@
         "psr-4": {
             "Tests\\": "tests"
         }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit",
+            "./vendor/bin/phpcs --standard=PSR2 src"
+        ]
     }
 }
