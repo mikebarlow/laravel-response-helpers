@@ -1,5 +1,5 @@
 {
-    "name": "mikebarlow/laravel-response-helpers",
+    "name": "snscripts/laravel-response-helpers",
     "description": "Helpers for Laravel based API responses",
     "type": "library",
     "license": "MIT",
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "~5.0|~6.0|~7.0"
+        "illuminate/http": "~5.0|~6.0|~7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",
@@ -20,5 +20,13 @@
         "files": [
             "src/helpers.php"
         ]
+    },
+    "autoload-dev": {
+        "files": [
+            "tests/helpers.php"
+        ],
+        "psr-4": {
+            "Tests\\": "tests"
+        }
     }
 }
