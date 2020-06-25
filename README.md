@@ -12,65 +12,276 @@ No extra setup is required. The helper file is autoloaded via the "autoload" att
 
 ## Usage
 
-Expanded documentation coming soon.
+### 2xx Success
 
-The following methods are available for returning from your endpoints.
+#### 200 OK
 
-    return ok($content, $headers); // 200
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return ok($content, $headers);
+```    
+
+#### 201 Created
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return created($content, $headers);
+```
+
+#### 202 Accepted
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return accepted($content, $headers);
+```
+
+#### 204 No Content
+   
+```php
+    /**
+     * @param  array  $headers
+     */ 
+    return noContent($headers);
+```
+
+### 3xx Redirection
+
+#### 301 Moved Permanently
+   
+```php
+    /**
+     * @param  string $newUrl
+     * @param  array  $headers
+     */ 
+    return movedPermanently($newUrl, $headers);
+```
+
+#### 302 Found
+   
+```php
+    /**
+     * @param  string $url
+     * @param  array  $headers
+     */ 
+    return found($url, $headers);
+```
     
-    return created($content, $headers); // 201
+#### 303 Found
+   
+```php
+    /**
+     * @param  string $newUrl
+     * @param  array  $headers
+     */ 
+    return seeOther($newUrl, $headers);
+```
+
+#### 307 Temporary Redirect
+   
+```php
+    /**
+     * @param  string $tempUrl
+     * @param  array  $headers
+     */ 
+    return temporaryRedirect($tempUrl, $headers);
+```
+
+### 4xx Client Errors
     
-    return accepted($content, $headers); // 202
+#### 400 Bad Request
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return badRequest($content, $headers);
+```
+
+#### 401 Unauthorized
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return unauthorized($content, $headers);
+```
+
+#### 402 Payment Required
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return paymentRequired($content, $headers);
+``` 
+
+#### 403 Forbidden
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return forbidden($content, $headers);
+```
+
+#### 404 Not Found
+   
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return notFound($content, $headers);
+```
+
+#### 405 Method Not Allowed
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return methodNotAllowed($content, $headers);
+```
+
+#### 406 Not Acceptable
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return notAcceptable($content, $headers);
+```
+
+#### 410 Gone
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return gone($content, $headers);
+```
+
+#### 413 Payload Too Large
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return payloadTooLarge($content, $headers);
+```
+
+#### 422 Unprocessable Entity
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return unprocessableEntity($content, $headers);
+```
+
+#### 426 Upgrade Required
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return upgradeRequired($content, $headers);
+```
+
+#### 429 Too Many Requests
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return tooManyRequests($content, $headers);
+```
+
+### 5xx Server Errors   
     
-    return noContent($headers); // 204
+#### 500 Internal Server Errors
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return internalServerError($content, $headers);
+```
     
-    return movedPermanently($newUrl, $headers); // 301
-    
-    return found($url, $headers); // 302
-    
-    return seeOther($newUrl, $headers); // 303
-    
-    return temporaryRedirect($tempUrl, $headers); // 307
-    
-    return badRequest($content, $headers); // 400
-    
-    return unauthorized($content, $headers); // 401
-    
-    return paymentRequired($content, $headers); // 402
-    
-    return forbidden($content, $headers); // 403
-    
-    return notFound($content, $headers); // 404
-    
-    return methodNotAllowed($content, $headers); // 405
-    
-    return notAcceptable($content, $headers); // 406
-    
-    return gone($content, $headers); // 410
-    
-    return payloadTooLarge($content, $headers); // 413
-    
-    return unprocessableEntity($content, $headers); // 422
-    
-    return upgradeRequired($content, $headers); // 426
-    
-    return tooManyRequests($content, $headers); // 429
-    
-    return internalServerError($content, $headers); // 500
-    
-    return notImplemented($content, $headers); // 501
-    
-    return badGateway($content, $headers); // 502
-    
-    return serviceUnavailable($content, $headers); // 503
-    
-    return gatewayTimeout($content, $headers); // 504
-    
-    return insufficientStorage($content, $headers); // 507
+#### 501 Not Implemented
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return notImplemented($content, $headers);
+```
+
+#### 502 Bad Gateway
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return badGateway($content, $headers);
+```
+
+#### 503 Service Unavailable
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return serviceUnavailable($content, $headers);
+```
+
+#### 504 Gateway Timeout
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return gatewayTimeout($content, $headers);
+```
+
+#### 507 Insufficient Storage
+
+```php
+    /**
+     * @param  \Illuminate\View\View|string|array|null  $content
+     * @param  array  $headers
+     */ 
+    return insufficientStorage($content, $headers);
+```
     
 ## Testing
 
-If you wish to run the tests, clone out the repo
+If you wish to run the tests, clone out the repository
 
     git clone git@github.com:mikebarlow/laravel-response-helpers.git
     
