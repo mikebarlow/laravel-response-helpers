@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="snscripts/laravel-response-helpers tests">
+        <testsuite name="mbarlow/laravel-response-helpers tests">
             <directory>tests/</directory>
         </testsuite>
     </testsuites>
