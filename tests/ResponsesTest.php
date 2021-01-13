@@ -3,7 +3,7 @@
 namespace Tests;
 
 use Illuminate\Http\Response;
-use PHPUnit\Framework\TestCase;
+use Orchestra\Testbench\TestCase;
 
 class ResponsesTest extends TestCase
 {
