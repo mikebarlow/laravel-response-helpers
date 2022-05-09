@@ -1,10 +1,12 @@
-# Laravel API Response Helpers
+<p align="center"><a href="https://mikebarlow.co.uk" target="_blank"><img src="https://raw.githubusercontent.com/mikebarlow/laravel-response-helpers/master/Laravel%20Response%20Helpers.png" width="800"></a></p>
 
-[![Author](http://img.shields.io/badge/author-@mikebarlow-red.svg?style=flat-square)](https://twitter.com/mikebarlow)
-[![Source Code](http://img.shields.io/badge/source-mikebarlow/laravel--response--helpers-brightgreen.svg?style=flat-square)](https://github.com/mikebarlow/laravel-response-helpers)
-[![Latest Version](https://img.shields.io/github/release/mikebarlow/laravel-response-helpers.svg?style=flat-square)](https://github.com/mikebarlow/laravel-response-helpers/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/mikebarlow/laravel-response-helpers/blob/master/LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/mikebarlow/laravel-response-helpers/PHP%20Composer?style=flat-square)](https://github.com/mikebarlow/laravel-response-helpers/actions)
+<p align="center">
+    <a href="https://twitter.com/mikebarlow" target="_blank"><img src="http://img.shields.io/badge/author-@mikebarlow-red.svg?style=flat-square" alt="Author"></a>
+    <a href="https://github.com/mikebarlow/laravel-response-helpers" target="_blank"><img src="http://img.shields.io/badge/source-mikebarlow/laravel--response--helpers-brightgreen.svg?style=flat-square" alt="Source Code"></a>
+    <a href="https://github.com/mikebarlow/laravel-response-helpers/releases" target="_blank"><img src="https://img.shields.io/github/release/mikebarlow/laravel-response-helpers.svg?style=flat-square" alt="Latest Version"></a>
+    <a href="https://github.com/mikebarlow/laravel-response-helpers/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
+    <a href="https://github.com/mikebarlow/laravel-response-helpers/actions" target="_blank"><img src="https://img.shields.io/github/workflow/status/mikebarlow/laravel-response-helpers/PHP%20Composer?style=flat-square" alt="Build Status"></a>
+</p>  
 
 A collection of helpers for returning a response from your API more expressively.
 
