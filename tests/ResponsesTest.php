@@ -7,10 +7,7 @@ use Orchestra\Testbench\TestCase;
 
 class ResponsesTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function can_return_200_ok()
+    public function testItCanReturn200Ok(): void
     {
         $response = ok(['message' => 'ok'], ['x-custom-header' => 'test']);
 
@@ -20,10 +17,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_201_created()
+    public function testItCanReturn201Created(): void
     {
         $response = created(['message' => 'created'], ['x-custom-header' => 'test']);
 
@@ -33,10 +27,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_202_accepted()
+    public function testItCanReturn202Accepted(): void
     {
         $response = accepted(['message' => 'accepted'], ['x-custom-header' => 'test']);
 
@@ -46,10 +37,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_204_no_content()
+    public function testItCanReturn204NoContent(): void
     {
         $response = noContent(['x-custom-header' => 'test']);
 
@@ -58,10 +46,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_301_moved_permanently()
+    public function testItCanReturn301MovedPermanently(): void
     {
         $response = movedPermanently('https://example.com/new-url', ['x-custom-header' => 'test']);
 
@@ -71,10 +56,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('https://example.com/new-url', $response->headers->get('Location'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_302_found()
+    public function testItCanReturn302Found(): void
     {
         $response = found('https://example.com/url', ['x-custom-header' => 'test']);
 
@@ -84,10 +66,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('https://example.com/url', $response->headers->get('Location'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_303_see_other()
+    public function testItCanReturn303SeeOther(): void
     {
         $response = seeOther('https://example.com/new-url', ['x-custom-header' => 'test']);
 
@@ -97,10 +76,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('https://example.com/new-url', $response->headers->get('Location'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_307_temporary_redirect()
+    public function testItCanReturn307TemporaryRedirect(): void
     {
         $response = temporaryRedirect('https://example.com/new-url', ['x-custom-header' => 'test']);
 
@@ -110,10 +86,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('https://example.com/new-url', $response->headers->get('Location'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_400_bad_request()
+    public function testItCanReturn400BadRequest(): void
     {
         $response = badRequest(['message' => 'bad request'], ['x-custom-header' => 'test']);
 
@@ -123,10 +96,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_401_unauthorized()
+    public function testItCanReturn401Unauthorized(): void
     {
         $response = unauthorized(['message' => 'unauthorized'], ['x-custom-header' => 'test']);
 
@@ -136,10 +106,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_402_payment_required()
+    public function testItCanReturn402PaymentRequired(): void
     {
         $response = paymentRequired(['message' => 'payment required'], ['x-custom-header' => 'test']);
 
@@ -149,10 +116,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_403_forbidden()
+    public function testItCanReturn403Forbidden(): void
     {
         $response = forbidden(['message' => 'forbidden'], ['x-custom-header' => 'test']);
 
@@ -162,10 +126,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_404_not_found()
+    public function testItCanReturn404NotFound(): void
     {
         $response = notFound(['message' => 'not found'], ['x-custom-header' => 'test']);
 
@@ -175,10 +136,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_405_method_not_allowed()
+    public function testItCanReturn405MethodNotAllowed(): void
     {
         $response = methodNotAllowed(['message' => 'method not allowed'], ['x-custom-header' => 'test']);
 
@@ -188,10 +146,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_406_not_acceptable()
+    public function testItCanReturn406NotAcceptable(): void
     {
         $response = notAcceptable(['message' => 'not acceptable'], ['x-custom-header' => 'test']);
 
@@ -201,10 +156,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_410_gone()
+    public function testItCanReturn410Gone(): void
     {
         $response = gone(['message' => 'gone'], ['x-custom-header' => 'test']);
 
@@ -214,10 +166,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_413_payload_too_large()
+    public function testItCanReturn413PayloadTooLarge(): void
     {
         $response = payloadTooLarge(['message' => 'payload too large'], ['x-custom-header' => 'test']);
 
@@ -227,10 +176,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_422_unprocessable_entity()
+    public function testItCanReturn422UnprocessableEntity(): void
     {
         $response = unprocessableEntity(['message' => 'unprocessable entity'], ['x-custom-header' => 'test']);
 
@@ -240,10 +186,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_426_upgrade_required()
+    public function testItCanReturn426UpgradeRequired(): void
     {
         $response = upgradeRequired(['message' => 'upgrade required'], ['x-custom-header' => 'test']);
 
@@ -253,10 +196,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_429_too_many_requests()
+    public function testItCanReturn429TooManyRequests(): void
     {
         $response = tooManyRequests(['message' => 'too many requests'], ['x-custom-header' => 'test']);
 
@@ -266,10 +206,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_500_internal_server_error()
+    public function testItCanReturn500InternalServerError(): void
     {
         $response = internalServerError(['message' => 'internal server error'], ['x-custom-header' => 'test']);
 
@@ -279,10 +216,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_501_not_implemented()
+    public function testItCanReturn501NotImplemented(): void
     {
         $response = notImplemented(['message' => 'not implemented'], ['x-custom-header' => 'test']);
 
@@ -292,10 +226,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_502_bad_gateway()
+    public function testItCanReturn502BadGateway(): void
     {
         $response = badGateway(['message' => 'bad gateway'], ['x-custom-header' => 'test']);
 
@@ -305,10 +236,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_503_service_unavailable()
+    public function testItCanReturn503ServiceUnavailable(): void
     {
         $response = serviceUnavailable(['message' => 'service unavailable'], ['x-custom-header' => 'test']);
 
@@ -318,10 +246,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_504_gateway_timeout()
+    public function testItCanReturn504GatewayTimeout(): void
     {
         $response = gatewayTimeout(['message' => 'gateway timeout'], ['x-custom-header' => 'test']);
 
@@ -331,10 +256,7 @@ class ResponsesTest extends TestCase
         $this->assertSame('test', $response->headers->get('x-custom-header'));
     }
 
-    /**
-     * @test
-     */
-    public function can_return_507_insufficient_storage()
+    public function testItCanReturn507InsufficientStorage(): void
     {
         $response = insufficientStorage(['message' => 'insufficient storage'], ['x-custom-header' => 'test']);
 
