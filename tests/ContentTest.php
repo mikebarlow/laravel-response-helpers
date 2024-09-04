@@ -6,10 +6,7 @@ use Orchestra\Testbench\TestCase;
 
 class ContentTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function strings_and_arrays_pass_through()
+    public function testStringsAndArraysPassThrough(): void
     {
         $string = 'This is the output';
         $array = [
@@ -28,10 +25,7 @@ class ContentTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
-    public function can_transform_json_resource()
+    public function testItCanTransformJsonResource(): void
     {
         $resource = new MyResource([
             'test1' => 'This is a test',
