@@ -5,7 +5,7 @@
     <a href="https://github.com/mikebarlow/laravel-response-helpers" target="_blank"><img src="http://img.shields.io/badge/source-mikebarlow/laravel--response--helpers-brightgreen.svg?style=flat-square" alt="Source Code"></a>
     <a href="https://github.com/mikebarlow/laravel-response-helpers/releases" target="_blank"><img src="https://img.shields.io/github/release/mikebarlow/laravel-response-helpers.svg?style=flat-square" alt="Latest Version"></a>
     <a href="https://github.com/mikebarlow/laravel-response-helpers/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a>
-    <a href="https://github.com/mikebarlow/laravel-response-helpers/actions" target="_blank"><img src="https://img.shields.io/github/workflow/status/mikebarlow/laravel-response-helpers/PHP%20Composer?style=flat-square" alt="Build Status"></a>
+    <a href="https://github.com/mikebarlow/laravel-response-helpers/actions" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/mikebarlow/laravel-response-helpers/php.yml?branch=master&style=flat-square" alt="Build Status"></a>
 </p>  
 
 A collection of helpers for returning a response from your API more expressively.
