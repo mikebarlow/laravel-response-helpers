@@ -2,6 +2,10 @@
 
 All notable changes to `mbarlow/laravel-response-helpers` will be documented in this file
 
+## 2.4.0 - 2025-03-10
+
+- Added support for Laravel 12. [#6](https://github.com/mikebarlow/laravel-response-helpers/pull/6)
+
 ## 2.3.0 - 2024-09-04
 
 - Added support for Laravel 11. [#5](https://github.com/mikebarlow/laravel-response-helpers/pull/5)
