@@ -2,6 +2,11 @@
 
 All notable changes to `mbarlow/laravel-response-helpers` will be documented in this file
 
+## 2.5.0 - 2026-08-11
+
+- Added support for Laravel 13.
+- Updated test dependencies for Orchestra Testbench 10/11 and PHPUnit 12.
+
 ## 2.4.0 - 2025-03-10
 
 - Added support for Laravel 12. [#6](https://github.com/mikebarlow/laravel-response-helpers/pull/6)
